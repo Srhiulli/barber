@@ -3,6 +3,9 @@ import Header from "./_components/header";
 import { Button } from "./_components/ui/button";
 import { Input } from "./_components/ui/input";
 import Image from "next/image";
+import { Card, CardContent } from "./_components/ui/card";
+import { Badge } from "./_components/ui/badge";
+import { Avatar, AvatarImage } from "./_components/ui/avatar";
 
 export default function Home() {
   return (
@@ -25,6 +28,25 @@ export default function Home() {
             alt="banner"
           />
         </div>
+        <Card className="mt-6">
+          <CardContent className="flex justify-between p-0">
+            <div className="flex flex-col gap-2 p-5 py-5 pl-5">
+              <Badge className="w-fit">Confirmado</Badge>
+              <h3 className="font-semibold">Corte de cabelo</h3>
+              <div className="flex gap-2">
+                <Avatar className="h-6 w-6">
+                  <AvatarImage src="/barba.svg" />
+                </Avatar>
+                <p className="text-sm">Barbearia 2.0</p>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-center px-5 border-l-2 border-solid">
+              <p className="text-sm"> Fevereiro</p>
+              <p className="text-2xl font-semibold"> 02</p>
+              <p className="text-sm"> 20:00</p>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
