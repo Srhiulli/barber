@@ -23,12 +23,33 @@ const Home = async () => {
       <div className="p-5">
         <h2 className="text-xl font-bold"> Olá, Sarinha</h2>
         <p>Domingo, 02 de fevereiro</p>
-        <div className="flex items-center gap-2 mt-8">
-          <Input placeholder="Faça a sua busca" />
+        <div className="flex items-center gap-2 mt-6 ">
+          <Input placeholder="Faça a sua busca..." />
           <Button>
             <SearchIcon />
           </Button>
         </div>
+
+        <div className="flex gap-3 mt-6">
+          <Button className="gap-2" variant="secondary">
+            <Image src="/cabelo.svg" width={16} height={16} alt="Cabelo" />
+            Cabelo
+          </Button>
+          <Button className="gap-2" variant="secondary">
+            <Image src="/barba.svg" width={16} height={16} alt="Barba" />
+            Barba
+          </Button>
+          <Button className="gap-2" variant="secondary">
+            <Image
+              src="/acabamento.svg"
+              width={16}
+              height={16}
+              alt="Acabamento"
+            />
+            Acabamento
+          </Button>
+        </div>
+
         <div className="relative w-full h-[150px] mt-6 ">
           <Image
             src="/banner-01.png"
@@ -37,6 +58,7 @@ const Home = async () => {
             alt="banner"
           />
         </div>
+
         <h2 className="uppercase font-bold text-xs text-gray-400 mt-6 mb-3">
           {" "}
           Agendamentos
