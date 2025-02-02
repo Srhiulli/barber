@@ -11,6 +11,11 @@ import { db } from "./_lib/prisma";
 
 const Home = async () => {
   const barbershops = await db.barbershop.findMany({});
+  const popularBarbershops = await db.barbershop.findMany({
+    orderBy: {
+      name: "desc",
+    },
+  });
 
   return (
     <div>
@@ -59,11 +64,24 @@ const Home = async () => {
           {" "}
           Recomendados
         </h2>
-        <div className=" flex gap-4">
+        <div className="flex gap-4 overflow-auto [&::-webkit-scrollbar]:hidden">
           {barbershops.map((barbershop) => (
             <BarberShopItem key={barbershop.id} barbershop={barbershop} />
           ))}
         </div>
+
+        <h2 className="uppercase font-bold text-xs text-gray-400 mt-6 mb-3">
+          {" "}
+          Populares
+        </h2>
+        <div className="flex gap-4 overflow-auto [&::-webkit-scrollbar]:hidden">
+          {popularBarbershops.map((barbershop) => (
+            <BarberShopItem key={barbershop.id} barbershop={barbershop} />
+          ))}
+        </div>
+        <Card>
+          <CardContent></CardContent>
+        </Card>
       </div>
     </div>
   );
