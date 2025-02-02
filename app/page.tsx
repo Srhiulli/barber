@@ -3,7 +3,6 @@ import Header from "./_components/header";
 import { Button } from "./_components/ui/button";
 import { Input } from "./_components/ui/input";
 import Image from "next/image";
-import { Card, CardContent } from "./_components/ui/card";
 import BarberShopItem from "./_components/barberShop-item";
 import { db } from "./_lib/prisma";
 import { quickSearchOptions } from "./_constants/search";
@@ -81,9 +80,6 @@ const Home = async () => {
             <BarberShopItem key={barbershop.id} barbershop={barbershop} />
           ))}
         </div>
-        <Card>
-          <CardContent></CardContent>
-        </Card>
       </div>
     </div>
   );
