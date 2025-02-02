@@ -30,8 +30,8 @@ const Home = async () => {
           </Button>
         </div>
 
-        <div className="flex gap-3 mt-6">
-          <Button className="gap-2" variant="secondary">
+        <div className="flex gap-3 mt-6 overflow-auto [&::-webkit-scrollbar]:hidden">
+          <Button className="gap-2 " variant="secondary">
             <Image src="/cabelo.svg" width={16} height={16} alt="Cabelo" />
             Cabelo
           </Button>
@@ -47,6 +47,28 @@ const Home = async () => {
               alt="Acabamento"
             />
             Acabamento
+          </Button>
+          <Button className="gap-2" variant="secondary">
+            <Image
+              src="/sobrancelha.svg"
+              width={16}
+              height={16}
+              alt="Sobrancelha"
+            />
+            Sobrancelha
+          </Button>
+          <Button className="gap-2" variant="secondary">
+            <Image src="/massagem.svg" width={16} height={16} alt="Massagem" />
+            Massagem
+          </Button>
+          <Button className="gap-2" variant="secondary">
+            <Image
+              src="/hidratacao.svg"
+              width={16}
+              height={16}
+              alt="Hidratação"
+            />
+            Hidratação
           </Button>
         </div>
 
