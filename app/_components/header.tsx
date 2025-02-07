@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { Card, CardContent } from "./ui/card";
-import { MenuIcon } from "lucide-react";
-// import { Sheet, SheetTrigger } from "./ui/sheet"
-// import SidebarSheet from "./sidebar-sheet"
-import Link from "next/link";
 import { Button } from "./ui/button";
+import { MenuIcon } from "lucide-react";
+import { Sheet, SheetTrigger } from "./ui/sheet";
+import SidebarSheet from "./sidebar-sheet";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -13,16 +13,15 @@ const Header = () => {
         <Link href="/">
           <Image alt="FSW Barber" src="/logo.png" height={18} width={120} />
         </Link>
-        <Button size="icon" variant="outline">
-          <MenuIcon />
-        </Button>
 
-        {/* <Sheet>
+        <Sheet>
           <SheetTrigger asChild>
-           
+            <Button size="icon" variant="outline">
+              <MenuIcon />
+            </Button>
           </SheetTrigger>
           <SidebarSheet />
-        </Sheet> */}
+        </Sheet>
       </CardContent>
     </Card>
   );
