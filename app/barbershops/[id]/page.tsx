@@ -50,20 +50,18 @@ const BarbershopPage = async ({ params }: BarbershopPageProps) => {
           </Link>
         </Button>
 
-        <Button
-          size="icon"
-          variant="outline"
-          className="absolute right-4 top-4"
-        >
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button size="icon" variant="outline">
-                <MenuIcon />
-              </Button>
-            </SheetTrigger>
-            <SidebarSheet />
-          </Sheet>
-        </Button>
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button
+              size="icon"
+              variant="outline"
+              className="absolute right-4 top-4"
+            >
+              <MenuIcon />
+            </Button>
+          </SheetTrigger>
+          <SidebarSheet />
+        </Sheet>
       </div>
 
       <div className="border-b border-solid p-5">
