@@ -6,6 +6,8 @@ import { ChevronLeftIcon, MapPinIcon, MenuIcon, StarIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Sheet, SheetTrigger } from "../../_components/ui/sheet";
+import SidebarSheet from "../../_components/sidebar-sheet";
 
 interface BarbershopPageProps {
   params: {
@@ -53,7 +55,14 @@ const BarbershopPage = async ({ params }: BarbershopPageProps) => {
           variant="outline"
           className="absolute right-4 top-4"
         >
-          <MenuIcon />
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button size="icon" variant="outline">
+                <MenuIcon />
+              </Button>
+            </SheetTrigger>
+            <SidebarSheet />
+          </Sheet>
         </Button>
       </div>
 
