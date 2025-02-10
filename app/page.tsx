@@ -1,7 +1,6 @@
-import { SearchIcon } from "lucide-react";
+import Search from "./_components/shearch";
 import Header from "./_components/header";
 import { Button } from "./_components/ui/button";
-import { Input } from "./_components/ui/input";
 import Image from "next/image";
 import BarberShopItem from "./_components/barberShop-item";
 import { db } from "./_lib/prisma";
@@ -23,11 +22,8 @@ const Home = async () => {
       <div className="p-5">
         <h2 className="text-xl font-bold"> Olá, Sarinha</h2>
         <p>Domingo, 02 de fevereiro</p>
-        <div className="flex items-center gap-2 mt-6 ">
-          <Input placeholder="Faça a sua busca..." />
-          <Button>
-            <SearchIcon />
-          </Button>
+        <div className="flex items-center gap-2 mt-6">
+          <Search />
         </div>
 
         <div className="mt-6 flex gap-3 overflow-x-scroll [&::-webkit-scrollbar]:hidden">
