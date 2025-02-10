@@ -33,7 +33,7 @@ const BarbershopPage = async ({ params }: BarbershopPageProps) => {
     <div>
       <div className="relative h-[250px] w-full">
         <Image
-          alt={barbershop.name}
+          alt={barbershop?.name}
           src={barbershop?.imageUrl}
           fill
           className="object-cover"

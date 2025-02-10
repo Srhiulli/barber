@@ -17,7 +17,7 @@ const BarbershopItem = ({ barbershop }: BarbershopItemProps) => {
         {/* IMAGEM */}
         <div className="relative h-[159px] w-full">
           <Image
-            alt={barbershop.name}
+            alt={barbershop?.name}
             fill
             className="rounded-2xl object-cover"
             src={barbershop.imageUrl}
